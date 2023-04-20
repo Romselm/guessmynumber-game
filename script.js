@@ -23,7 +23,7 @@ document.querySelector('.check').addEventListener('click', function () {
   const guess = Number(document.querySelector('.guess').value);
   console.log(guess, typeof guess);
 
-  if (!guess) {
+  if (!guess && gameStatus === 1) {
     displayMessage('⛔ No Number');
   } else if (guess === secretNumber) {
     displayMessage('🥳 Correct Number!');
